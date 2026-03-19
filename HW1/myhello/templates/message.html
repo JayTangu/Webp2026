@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>PoE 反叛獎勵表</title>
+
+<style>
+
+body{
+background:#0e0e0e;
+color:white;
+font-family:Arial;
+text-align:center;
+}
+
+h1{
+margin:20px;
+}
+
+button{
+margin:10px;
+padding:10px 20px;
+font-size:16px;
+cursor:pointer;
+}
+
+.grid{
+display:grid;
+grid-template-columns:120px repeat(17,90px);
+gap:6px;
+justify-content:center;
+margin-top:20px;
+}
+
+.cell{
+width:90px;
+height:120px;
+background:#333;
+border:1px solid #555;
+display:flex;
+flex-direction:column;
+align-items:center;
+justify-content:center;
+font-size:12px;
+}
+
+.cell img{
+width:70px;
+height:70px;
+margin-bottom:4px;
+}
+
+/* 左側分類 */
+
+.category{
+background:#222;
+font-weight:bold;
+color:#ffa726;
+}
+
+/* 第一列角色 */
+
+.header{
+background:#1a1a1a;
+}
+
+/* 可點擊格子 */
+
+.reward{
+cursor:pointer;
+}
+
+/* Tier */
+
+.t1{background:#4caf50;}
+.t2{background:#ffc107;}
+.t3{background:#f44336;}
+
+</style>
+</head>
+
+<body>
+
+{% load static %}
+
+<h1>PoE 反叛機制獎勵表</h1>
+
+<button onclick="clearAll()">一鍵清空</button>
+
+<div class="grid">
+
+<!-- 左上角空白 -->
+<div></div>
+
+<!-- 第一行角色 -->
+
+<div class="cell header"><img src="{% static 'syndicate/imgi_1_Aisling.png' %}">愛斯林</div>
+<div class="cell header"><img src="{% static 'syndicate/imgi_2_Cameria.png' %}">卡麥里亞</div>
+<div class="cell header"><img src="{% static 'syndicate/imgi_3_Elreon.png' %}">艾爾雷恩</div>
+<div class="cell header"><img src="{% static 'syndicate/imgi_4_Gravicius.png' %}">格拉維奇</div>
+<div class="cell header"><img src="{% static 'syndicate/imgi_5_Guff.png' %}">哥夫</div>
+<div class="cell header"><img src="{% static 'syndicate/imgi_6_Haku.png' %}">哈庫</div>
+<div class="cell header"><img src="{% static 'syndicate/imgi_7_Hillock.png' %}">西拉客</div>
+<div class="cell header"><img src="{% static 'syndicate/imgi_8_It_That_Fled.png' %}">叛逃之彼</div>
+<div class="cell header"><img src="{% static 'syndicate/imgi_9_Janus.png' %}">傑納斯</div>
+<div class="cell header"><img src="{% static 'syndicate/imgi_10_Thane_Jorgin.png' %}">喬恩</div>
+<div class="cell header"><img src="{% static 'syndicate/imgi_11_Korell_Goya.png' %}">庫歐</div>
+<div class="cell header"><img src="{% static 'syndicate/imgi_12_Leo.png' %}">里歐</div>
+<div class="cell header"><img src="{% static 'syndicate/imgi_13_Riker_Maloney.png' %}">萊可</div>
+<div class="cell header"><img src="{% static 'syndicate/imgi_14_Rin.png' %}">琳</div>
+<div class="cell header"><img src="{% static 'syndicate/imgi_15_Tora.png' %}">托拉</div>
+<div class="cell header"><img src="{% static 'syndicate/imgi_16_Vagan.png' %}">瓦甘</div>
+<div class="cell header"><img src="{% static 'syndicate/imgi_17_Vorici.png' %}">瓦西里</div>
+
+
+<!-- 傳送使 -->
+
+<div class="cell category">傳送使</div>
+
+<div class="cell reward"><img src="{% static 'syndicate/imgi_18_雙隱匿詞物品.png' %}">雙隱匿詞物品</div>
+<div class="cell reward"><img src="{% static 'syndicate/imgi_19_深淵聖甲蟲.png' %}">深淵聖甲蟲</div>
+<div class="cell reward"><img src="{% static 'syndicate/imgi_20_地圖碎片.png' %}">地圖碎片</div>
+<div class="cell reward"><img src="{% static 'syndicate/imgi_21_滿疊層命運卡.png' %}">滿疊層命運卡</div>
+<div class="cell reward"><img src="{% static 'syndicate/imgi_22_隨機通貨.png' %}">隨機通貨</div>
+<div class="cell reward"><img src="{% static 'syndicate/imgi_23_傳奇保險箱.png' %}">傳奇保險箱</div>
+<div class="cell reward"><img src="{% static 'syndicate/imgi_24_勢力裝備陷阱箱.png' %}">勢力裝備陷阱箱</div>
+<div class="cell reward"><img src="{% static 'syndicate/imgi_25_穢生傳奇陷阱箱.png' %}">穢生傳奇陷阱箱</div>
+<div class="cell reward"><img src="{% static 'syndicate/imgi_26_金幣.png' %}">金幣</div>
+<div class="cell reward"><img src="{% static 'syndicate/imgi_27_硫酸聖甲蟲.png' %}">硫酸聖甲蟲</div>
+<div class="cell reward"><img src="{% static 'syndicate/imgi_28_混亂聖甲蟲.png' %}">混亂聖甲蟲</div>
+<div class="cell reward"><img src="{% static 'syndicate/imgi_29_穿越聖甲蟲.png' %}">穿越聖甲蟲</div>
+<div class="cell reward"><img src="{% static 'syndicate/imgi_30_傳奇物品.png' %}">傳奇物品</div>
+<div class="cell reward"><img src="{% static 'syndicate/imgi_31_始創者地圖.png' %}">始創者地圖</div>
+<div class="cell reward"><img src="{% static 'syndicate/imgi_32_精良寶石_費斯特之鏡.png' %}">精良寶石_費斯特之鏡</div>
+<div class="cell reward"><img src="{% static 'syndicate/imgi_33_孵化器寶箱.png' %}">孵化器寶箱</div>
+<div class="cell reward"><img src="{% static 'syndicate/imgi_34_滿疊層通貨.png' %}">滿疊層通貨</div>
+
+
+<!-- 架防使 -->
+
+<div class="cell category">禦防使</div>
+
+<div class="cell reward"><img src="{% static 'syndicate/imgi_35_隱匿崇高工藝台.png' %}">隱匿崇高工藝台</div>
+<div class="cell reward"><img src="{% static 'syndicate/imgi_36_珠寶陷阱箱.png' %}">珠寶陷阱箱</div>
+<div class="cell reward"><img src="{% static 'syndicate/imgi_37_汙染裝備陷阱箱.png' %}">汙染裝備陷阱箱</div>
+<div class="cell reward"><img src="{% static 'syndicate/imgi_38_隨機命運卡陷阱箱.png' %}">隨機命運卡陷阱箱</div>
+<div class="cell reward"><img src="{% static 'syndicate/imgi_39_稀有裝備陷阱箱.png' %}">稀有裝備陷阱箱</div>
+<div class="cell reward"><img src="{% static 'syndicate/imgi_40_支配聖甲蟲.png' %}">支配聖甲蟲</div>
+<div class="cell reward"><img src="{% static 'syndicate/imgi_41_勢力裝備工藝台.png' %}">勢力裝備工藝台</div>
+<div class="cell reward"><img src="{% static 'syndicate/imgi_42_裂痕戒指工藝台(穢生工藝).png' %}">裂痕戒指工藝台(穢生工藝)</div>
+<div class="cell reward"><img src="{% static 'syndicate/imgi_43_卡爾格聖甲蟲.png' %}">卡爾格聖甲蟲</div>
+<div class="cell reward"><img src="{% static 'syndicate/imgi_44_掘獄裝備陷阱箱.png' %}">掘獄裝備陷阱箱</div>
+<div class="cell reward"><img src="{% static 'syndicate/imgi_45_精髓裝備陷阱箱.png' %}">精髓裝備陷阱箱</div>
+<div class="cell reward"><img src="{% static 'syndicate/imgi_46_汙染傳奇陷阱箱.png' %}">汙染傳奇陷阱箱</div>
+<div class="cell reward"><img src="{% static 'syndicate/imgi_47_傳奇物品陷阱箱.png' %}">傳奇物品陷阱箱</div>
+<div class="cell reward"><img src="{% static 'syndicate/imgi_48_傳奇地圖陷阱箱.png' %}">傳奇地圖陷阱箱</div>
+<div class="cell reward"><img src="{% static 'syndicate/imgi_49_寶石陷阱箱.png' %}">寶石陷阱箱</div>
+<div class="cell reward"><img src="{% static 'syndicate/imgi_50_孵化器加速.png' %}">孵化器加速</div>
+<div class="cell reward"><img src="{% static 'syndicate/imgi_51_重鑄插槽自選裝備.png' %}">重鑄插槽自選裝備</div>
+
+
+<!-- 修研使 -->
+
+<div class="cell category">修研使</div>
+
+<div class="cell reward"><img src="{% static 'syndicate/imgi_52_隱匿混沌工藝台.png' %}">隱匿混沌工藝台</div>
+<div class="cell reward"><img src="{% static 'syndicate/imgi_53_珠寶工藝台.png' %}">珠寶工藝台</div>
+<div class="cell reward"><img src="{% static 'syndicate/imgi_54_玷汙通貨工藝台.png' %}">玷汙通貨工藝台</div>
+<div class="cell reward"><img src="{% static 'syndicate/imgi_55_交換命運卡.png' %}">交換命運卡</div>
+<div class="cell reward"><img src="{% static 'syndicate/imgi_56_映像迷霧工藝台.png' %}">映像迷霧工藝台</div>
+<div class="cell reward"><img src="{% static 'syndicate/imgi_57_勢力崇高_髮絲工藝台.png' %}">勢力崇高_髮絲工藝台</div>
+<div class="cell reward"><img src="{% static 'syndicate/imgi_58_異能通貨工藝台.png' %}">異能通貨工藝台</div>
+<div class="cell reward"><img src="{% static 'syndicate/imgi_59_玷汙工藝台.png' %}">玷汙工藝台</div>
+<div class="cell reward"><img src="{% static 'syndicate/imgi_60_卡迪羅傳奇.png' %}">卡迪羅傳奇</div>
+<div class="cell reward"><img src="{% static 'syndicate/imgi_61_魔符工藝台.png' %}">魔符工藝台</div>
+<div class="cell reward"><img src="{% static 'syndicate/imgi_62_精髓工藝台.png' %}">精髓工藝台</div>
+<div class="cell reward"><img src="{% static 'syndicate/imgi_63_巨靈瓦寶工藝台.png' %}">巨靈瓦寶工藝台</div>
+<div class="cell reward"><img src="{% static 'syndicate/imgi_64_古變石工藝台.png' %}">古變石工藝台</div>
+<div class="cell reward"><img src="{% static 'syndicate/imgi_65_聖甲蟲陷阱箱.png' %}">聖甲蟲陷阱箱</div>
+<div class="cell reward"><img src="{% static 'syndicate/imgi_66_寶石工藝台.png' %}">寶石工藝台</div>
+<div class="cell reward"><img src="{% static 'syndicate/imgi_67_破裂石工藝台.png' %}">破裂石工藝台</div>
+<div class="cell reward"><img src="{% static 'syndicate/imgi_68_機會石自選裝備.png' %}">機會石自選裝備</div>
+
+
+<!-- 調停使 -->
+
+<div class="cell category">調停使</div>
+
+<div class="cell reward"><img src="{% static 'syndicate/imgi_69_苦痛聖甲蟲.png' %}">苦痛聖甲蟲</div>
+<div class="cell reward"><img src="{% static 'syndicate/imgi_70_譫妄聖甲蟲.png' %}">譫妄聖甲蟲</div>
+<div class="cell reward"><img src="{% static 'syndicate/imgi_71_超越聖甲蟲.png' %}">超越聖甲蟲</div>
+<div class="cell reward"><img src="{% static 'syndicate/imgi_72_命運聖甲蟲.png' %}">命運聖甲蟲</div>
+<div class="cell reward"><img src="{% static 'syndicate/imgi_73_凋落聖甲蟲.png' %}">凋落聖甲蟲</div>
+<div class="cell reward"><img src="{% static 'syndicate/imgi_74_伏擊聖甲蟲.png' %}">伏擊聖甲蟲</div>
+<div class="cell reward"><img src="{% static 'syndicate/imgi_75_勢力聖甲蟲.png' %}">勢力聖甲蟲</div>
+<div class="cell reward"><img src="{% static 'syndicate/imgi_76_裂痕聖甲蟲.png' %}">裂痕聖甲蟲</div>
+<div class="cell reward"><img src="{% static 'syndicate/imgi_77_探險聖甲蟲.png' %}">探險聖甲蟲</div>
+<div class="cell reward"><img src="{% static 'syndicate/imgi_78_獸獵聖甲蟲.png' %}">獸獵聖甲蟲</div>
+<div class="cell reward"><img src="{% static 'syndicate/imgi_79_精髓聖甲蟲.png' %}">精髓聖甲蟲</div>
+<div class="cell reward"><img src="{% static 'syndicate/imgi_80_通牒聖甲蟲.png' %}">通牒聖甲蟲</div>
+<div class="cell reward"><img src="{% static 'syndicate/imgi_81_泰坦聖甲蟲.png' %}">泰坦聖甲蟲</div>
+<div class="cell reward"><img src="{% static 'syndicate/imgi_82_製圖聖甲蟲.png' %}">製圖聖甲蟲</div>
+<div class="cell reward"><img src="{% static 'syndicate/imgi_83_祭祀聖甲蟲.png' %}">祭祀聖甲蟲</div>
+<div class="cell reward"><img src="{% static 'syndicate/imgi_84_戰亂聖甲蟲.png' %}">戰亂聖甲蟲</div>
+<div class="cell reward"><img src="{% static 'syndicate/imgi_85_花園聖甲蟲.png' %}">花園聖甲蟲</div>
+
+</div>
+
+<script>
+
+function toggle(){
+
+let state=parseInt(this.dataset.state||0)
+
+state=(state+1)%4
+
+this.dataset.state=state
+
+this.classList.remove("t1","t2","t3")
+
+if(state==1)this.classList.add("t1")
+if(state==2)this.classList.add("t2")
+if(state==3)this.classList.add("t3")
+
+}
+
+document.querySelectorAll(".reward").forEach(c=>{
+c.addEventListener("click",toggle)
+})
+
+function clearAll(){
+
+document.querySelectorAll(".reward").forEach(c=>{
+c.dataset.state=0
+c.classList.remove("t1","t2","t3")
+})
+
+}
+
+</script>
+
+</body>
+</html>
