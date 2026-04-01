@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+
+<script>
+    function tree(n) {
+  printTreeTop(n);
+  printTreeBottom(n);
+}
+function printTreeTop(n) {
+    
+  for(let row = 1; row <= n ; row++) {
+    let spaceCount = n - row;
+    let starCount = 2 * row - 1;
+    console.log("\"" + repeatchar(spaceCount,' ') + repeatchar(starCount, '*') + "\"");
+  }
+}
+function printTreeBottom(n) {
+  let bottom = "";
+  for(let high = 0; high < 3 ; high++) {
+    bottom += "\"" + repeatchar(n-1,' ') + '*' + "\"" +'\n';
+  }
+  console.log(bottom.trimEnd());
+}
+function repeatchar(count, char) {
+  return char.repeat(count);
+}
+
+tree(4);
+</script>
+</html>
