@@ -14,8 +14,6 @@ function getimg() {
 
 function add_new_img(dataset) {
     var gal = document.getElementById("gallery");
-    gal.innerHTML = ""; // 清空內容
-
     // 針對清單中的前幾張照片，分別去抓取它們的尺寸
     dataset.forEach(function(item) {
         // 2. 取得個別照片尺寸的 URL (講義 Page 62)[cite: 3]
